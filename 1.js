@@ -1,8 +1,8 @@
 //manupulation of DOM elements of 1.html
 
 //1.a = change class name of a given class to new class of a html
-const changeClassName = (oldClassName, newClassName) => {
-  document.getElementById(oldClassName).className = newClassName;
+const changeClassName = (elementId, newClassName) => {
+  document.getElementById(elementId).className = newClassName;
   const y = document.getElementById("outer");
   console.log(y);
 };
@@ -39,7 +39,7 @@ const setValue = (fieldId, data) => {
   document.getElementById(fieldId).value = data;
 };
 
-changeClassName("newerClass");
+changeClassName("outer", "newerClass");
 getDataSet();
 injectNewElement("p", "Somethign to write");
 ajaxRequest("https://www.boredapi.com/api/activity");
